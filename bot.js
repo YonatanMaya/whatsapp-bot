@@ -3,7 +3,7 @@ const { Client, LocalAuth } = require('whatsapp-web.js');
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
-        executablePath: '/usr/bin/google-chrome-stable',
+        headless: true,  // מריץ את הדפדפן ברקע
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     }
 });
